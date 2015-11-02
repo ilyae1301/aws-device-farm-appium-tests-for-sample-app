@@ -5,6 +5,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+
 public class Screenshot
 {                
 public boolean takeScreenshot(final String name, RemoteWebDriver driver) 
