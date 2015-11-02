@@ -24,11 +24,14 @@ import org.testng.annotations.Test;
 /**
  * Tests for a webview
  */
+
 public class WebViewTest extends TestBase {
     private final String FULL_URL = "http://www.google.com";
     private final String WEBVIEW_ACCESSIBILITY = "Google";
 
     private WebViewPage webViewPage;
+    
+    private Screenshot screenShot = new Screenshot();
 
     @Override
     public String getName() {
@@ -52,5 +55,6 @@ public class WebViewTest extends TestBase {
     public void testWebView() throws InterruptedException {
         webViewPage.gotoUrl(FULL_URL);
         Assert.assertTrue(webViewPage.getWebDescription(WEBVIEW_ACCESSIBILITY));
+        screenShot.takeScreenshot("WebView", driver);
     }
 }

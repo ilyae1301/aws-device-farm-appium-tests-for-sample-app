@@ -34,6 +34,8 @@ public class LoginTest extends TestBase {
     private final String FAIL_PASSWORD = "12345";
 
     private LoginPage loginPage;
+    
+    private Screenshot screenShot = new Screenshot();
 
     @Override
     public String getName() {
@@ -56,6 +58,7 @@ public class LoginTest extends TestBase {
     public void loginSuccessFully(){
         loginPage.loginIn(CORRECT_USER_NAME, CORRECT_PASSWORD);
         Assert.assertEquals(loginPage.getMessage(), LOGIN_SUCCESS_MESSAGE);
+        screenShot.takeScreenshot("loginSuccess", driver);
     }
 
     /**
@@ -65,6 +68,7 @@ public class LoginTest extends TestBase {
     public void loginFail() {
         loginPage.loginIn(FAIL_USER_NAME, FAIL_PASSWORD);
         Assert.assertEquals(loginPage.getMessage(), LOGIN_FAIL_MESSAGE);
+        screenShot.takeScreenshot("loginFail", driver);
     }
 
     /**
@@ -74,5 +78,7 @@ public class LoginTest extends TestBase {
     public void logOut(){
         loginPage.pressAltButton();
         Assert.assertTrue(loginPage.checkIfBackAtLogin());
+        screenShot.takeScreenshot("logOut", driver);
+        
     }
 }
