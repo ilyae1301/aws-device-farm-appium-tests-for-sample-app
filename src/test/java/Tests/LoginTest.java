@@ -34,7 +34,6 @@ public class LoginTest extends TestBase {
     private final String FAIL_PASSWORD = "12345";
 
     private LoginPage loginPage;
-    
     private Screenshot screenShot = new Screenshot();
 
     @Override
@@ -79,6 +78,5 @@ public class LoginTest extends TestBase {
         loginPage.pressAltButton();
         Assert.assertTrue(loginPage.checkIfBackAtLogin());
         screenShot.takeScreenshot("logOut", driver);
-        
     }
 }

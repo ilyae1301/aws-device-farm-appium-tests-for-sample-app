@@ -30,7 +30,6 @@ public class WebViewTest extends TestBase {
     private final String WEBVIEW_ACCESSIBILITY = "Google";
 
     private WebViewPage webViewPage;
-    
     private Screenshot screenShot = new Screenshot();
 
     @Override
