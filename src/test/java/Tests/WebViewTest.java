@@ -55,6 +55,6 @@ public class WebViewTest extends TestBase {
     public void testWebView() throws InterruptedException {
         webViewPage.gotoUrl(FULL_URL);
         Assert.assertTrue(webViewPage.getWebDescription(WEBVIEW_ACCESSIBILITY));
-        screenShot.takeScreenshot("WebView", driver);
+        screenShot.takeScreenshot("WebViewTest", driver);
     }
 }
